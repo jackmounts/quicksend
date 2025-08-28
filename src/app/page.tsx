@@ -53,7 +53,7 @@ export default function Home() {
     cameraInputRef.current?.click();
   };
 
-  const handlePhoto = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLoading(true);
     if (e.target.files && e.target.files.length > 0) {
       const photos = Array.from(e.target.files);
@@ -148,7 +148,7 @@ export default function Home() {
                   multiple
                   hidden
                   ref={cameraInputRef}
-                  onChange={handlePhoto}
+                  onChange={handlePhotoChange}
                 />
               </div>
             </CardContent>
