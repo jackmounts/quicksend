@@ -83,7 +83,9 @@ export default function Home() {
   };
 
   const error = () => {
-    toast.error("File/s upload failed.");
+    toast.error(
+      "Errore nel caricamento. Se l'errore persiste è presente un problema con il server."
+    );
   };
 
   return (
