@@ -24,7 +24,7 @@ export default function Home() {
     fileInputRef.current?.click();
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleUploadChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLoading(true);
     if (e.target.files && e.target.files.length > 0) {
       const files = Array.from(e.target.files);
@@ -124,7 +124,7 @@ export default function Home() {
                   <input
                     type="file"
                     ref={fileInputRef}
-                    onChange={handleInputChange}
+                    onChange={handleUploadChange}
                     multiple
                     hidden
                   />
