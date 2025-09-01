@@ -5,7 +5,7 @@ import path from "path";
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
-    const uploadDir = path.join(process.cwd(), "/app/uploads");
+    const uploadDir = path.join(process.cwd(), "/app/uploads"); // Docker volume bind
 
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true });
