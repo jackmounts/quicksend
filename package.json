@@ -7,7 +7,8 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "host": "next start --host 0.0.0.0 --port 3000"
+    "host": "next start --host 0.0.0.0 --port 3000",
+    "pm2:restart": "pm2 reload ecosystem.config.js --env production"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
