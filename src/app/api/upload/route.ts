@@ -5,7 +5,7 @@ import path from "path";
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
-    const uploadDir = path.join(process.cwd(), "/uploads"); // Docker volume bind
+    const uploadDir = "\\\\nas\\quicksend";
 
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true });
