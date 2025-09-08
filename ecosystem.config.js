@@ -3,13 +3,13 @@ module.exports = {
     {
       name: "quicksend",
       script: "npm",
-      args: "host",
+      args: "start",
       env: {
         NODE_ENV: "production",
         PORT: 3000,
       },
       instances: "max",
-      exec_mode: "fork",
+      exec_mode: "cluster",
       watch: false,
       max_memory_restart: "500M",
       error_file: "./logs/err.log",
