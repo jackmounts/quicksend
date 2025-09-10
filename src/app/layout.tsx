@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Quick Send",
   description: "File sharing con il server Falco",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
